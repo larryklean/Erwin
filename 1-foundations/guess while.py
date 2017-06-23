@@ -18,4 +18,4 @@ while count < 4:
         else:
             break
 
-# print("tired too many times")
+# print("tried too many times")
