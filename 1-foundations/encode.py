@@ -1,4 +1,4 @@
 # -*-encoding:utf-8-*-
 
-import sys
-print(sys.getdefaultencoding())
+# import sys
+# print(sys.getdefaultencoding())
