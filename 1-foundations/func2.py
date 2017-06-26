@@ -1,5 +1,3 @@
-import time
-
 # 返回值数=0 返回None
 # 返回值数=1 返回Object
 # 返回值数>1 返回tuple
@@ -88,3 +86,24 @@ import time
 # func_test8("s")
 # print(school)
 
+def calc(*numbers):
+    sum = 0
+    for item in numbers:
+        sum = sum + item * item
+    return sum
+
+
+# print(calc((1, 2, 3)))
+
+# def person(name, age, *, city, job):
+#     print(name, age, city, job)
+
+
+# person("xiaoming", 15, city="ss", job="sss")
+
+def person(**kwargs):
+    for item in kwargs:
+        print(item)
+
+
+person(**{"age": 25, "name": "xiaoming"})

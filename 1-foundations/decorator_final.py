@@ -6,6 +6,7 @@ password = "123"
 def auth(auth_type):
     def outer_wrapper(func):
         def wrapper(*args, **kwargs):
+            # get username and password
             _username = input("input name:")
             _password = input("input password:")
             if auth_type == "local":

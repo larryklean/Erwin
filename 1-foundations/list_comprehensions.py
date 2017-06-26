@@ -15,8 +15,8 @@
 # l = list(range(1, 11))
 # print(l)
 
-# l = [m + n for m in 'ABC' for n in 'XYZ']
-# print(l)
+l = [m + n for m in 'ABC' for n in 'XYZ']
+print(l)
 
 # import os
 #
@@ -27,6 +27,6 @@
 # for k, v in m.items():
 #     print(k, '=', v)
 
-L1 = ['Hello', 'World', 18, 'Apple', None]
-L2 = [item.lower() for item in L1 if isinstance(item, str)]
-print(L2)
+# L1 = ['Hello', 'World', 18, 'Apple', None]
+# L2 = [item.lower() for item in L1 if isinstance(item, str)]
+# print(L2)

@@ -48,11 +48,27 @@ def fib(m):
 
 # for item in fib(10):
 #     print(item)
-g = fib(6)
-while True:
-    try:
-        x = next(g)
-        print("g : ", x)
-    except StopIteration as e:
-        print("Generator return value:", e.value)
-        break
+# while True:
+#     try:
+#         x = next(g)
+#         print("g : ", x)
+#     except StopIteration as e:
+#         print("Generator return value:", e.value)
+#         break
+
+# g = fib(6)
+# for item in g:
+#     print(item)
+
+
+def triangles():
+    l = [1]
+    while True:
+        yield l
+        l = [1] + [l[i - 1] + l[i] for i in range(1, len(l))] + [1]
+        if len(l) == 10:
+            return
+
+
+for item in triangles():
+    print(item)
