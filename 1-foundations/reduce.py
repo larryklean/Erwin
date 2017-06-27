@@ -62,8 +62,25 @@ def prod(l):
 
 # 利用map和reduce编写一个str2float函数，把字符串'123.456'转换成浮点数123.456：
 
+# def str2float(s):
+#     s = s.split('.')
+#
+#     def func1(x, y):
+#         return x * 10 + y
+#
+#     def func2(x, y):
+#         return x / 10 + y
+#
+#     def char2num(s):
+#         return {'0': 0, '1': 1, '2': 2, '3': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '9': 9}[s]
+#
+#     return reduce(func1, map(char2num, s[0])) + reduce(func2, list(map(char2num, s[1]))[::-1]) / 10
+#
+#
+# print(str2float("123.4567"))
+
 def str2float(s):
-    s = s.split('.')
+    s = s.split(".")
 
     def func1(x, y):
         return x * 10 + y
@@ -71,10 +88,10 @@ def str2float(s):
     def func2(x, y):
         return x / 10 + y
 
-    def char2num(s):
-        return {'0': 0, '1': 1, '2': 2, '3': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '9': 9}[s]
+    def str2num(ch):
+        return {"0": 0, "1": 1, "2": 2, "3": 3, "4": 4, "5": 5, "6": 6, "7": 7, "8": 8, "9": 9}[ch]
 
-    return reduce(func1, map(char2num, s[0])) + reduce(func2, list(map(char2num, s[1]))[::-1]) / 10
+    return reduce(func1, map(str2num, s[0])) + reduce(func2, list(map(str2num, s[1]))[::-1]) / 10
 
 
-print(str2float("123.4567"))
+print(str2float("123.456"))
