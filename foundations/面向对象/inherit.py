@@ -18,11 +18,16 @@ def run_twice(animal):
     animal.run()
 
 
-cat = Cat()
+# cat = Cat()
 # cat.run()
 
-dog = Dog()
+# dog = Dog()
 # dog.run()
+# run_twice(Dog())
 
 
-run_twice(Dog())
+def func(test='123', *args):
+    print(args)
+
+
+func(1, 2)
