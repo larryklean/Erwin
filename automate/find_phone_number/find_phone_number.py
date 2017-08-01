@@ -1,7 +1,6 @@
-#! python3
+# ! python3
 
 # 123-456-5678
-
 
 def is_phone_numer(text):
     if len(text) != 12:

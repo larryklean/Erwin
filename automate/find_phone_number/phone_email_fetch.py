@@ -39,3 +39,19 @@ if len(matches) > 0:
     print('\n'.join(matches))
 else:
     print('No phone number or email')
+
+# practice in the last
+# work 1
+# regex = re.compile(r'^(\d{1,3})(,\d{3})*$')
+# mo = regex.search('123,23')
+# print(mo.group())
+
+# work 2
+# regex_name = re.compile(r'^[A-Z][a-zA-Z]*\s[A-Z][a-z]+$')
+# mo = regex_name.search('Satoshi Nakamoto')
+# print(mo.group())
+
+# work3
+# regex3 = re.compile(r'(Alice|Bob|Carol)\s(eats|pets|throws)\s(apples|eats|baseballs)\.', re.IGNORECASE)
+# mo2 = regex3.search('BoB eats apples.')
+# print(mo2.group())
