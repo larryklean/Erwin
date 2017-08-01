@@ -107,6 +107,20 @@ print('包括换行符：')
 new_line_regex = re.compile('.*', re.DOTALL)
 print(new_line_regex.search('server the public true.\nProtect the innocent.\nUpload the public').group())
 
+# 不区分大小写
+ignore_regex = re.compile(r'ABC', re.IGNORECASE)
+print(ignore_regex.search('abc').group())
 
+# sub()替换字符串 第一个参数为新的字符串 第二个参数为需要被替换的字符串
+names_regex = re.compile(r'^Agent\w+')
+print(names_regex.sub('HELLO', 'Agent Alice gave the secrect documents to Agent Bob.'))
+
+# 管理复杂的正则表达式 在第二个参数位置设定re.VERBOSE 当正则表达式过长的时候，让其忽略掉其中的注释、空白、换行等信息
+long_regex = re.compile(r'''((\d{3})|\(\d{3}\))?  # area code
+                            (\s|-|\.)?  # sperator
+                            \d{3} 
+                            (\s|-|\.)\d{4}''', re.VERBOSE)
+
+# 组合使用 re.IGNOREC ASE、re.DOTALL（可以匹配换行在内的所有字符）、re.VERBOSE
+# |
 print('=====================')
-
