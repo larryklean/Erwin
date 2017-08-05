@@ -1,6 +1,7 @@
 #! python3
 
-import pyperclip, re
+import pyperclip
+import re
 
 phone_regex = re.compile(r'''(
     (\d{3}|\(\d{3}\))?
