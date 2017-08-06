@@ -2,7 +2,7 @@
 #     file_content = file_obj.read()
 #     print(file_content.strip())
 
-# with open('text.txt') as file_obj:
+# with open('source.txt') as file_obj:
 #     print(type(file_obj.read()))
 #     print(type(file_obj))
 # for line in file_obj.read():

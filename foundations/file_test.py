@@ -2,7 +2,7 @@ import sys
 import time
 
 # open file
-# file = open("text.txt", "w", encoding="utf-8")
+# file = open("source.txt", "w", encoding="utf-8")
 
 # get position of iterator
 # print("目前所在位置", file.tell())
@@ -49,7 +49,7 @@ import time
 #     time.sleep(0.1)
 
 # replace
-# file = open("text.txt", "r", encoding="utf-8")
+# file = open("source.txt", "r", encoding="utf-8")
 # file_new = open("text2.txt", "w", encoding="utf-8")
 #
 # for line in file:
@@ -61,6 +61,6 @@ import time
 # file_new.close()
 
 # with
-with open("text.txt", "r", encoding="utf-8") as file:
+with open("source.txt", "r", encoding="utf-8") as file:
     for line in file:
         print(line)

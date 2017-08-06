@@ -37,5 +37,5 @@ def make_quizs(source):
         answer_file.close()
 
 
-capitals = format_capitals('text.txt')
+capitals = format_capitals('source.txt')
 make_quizs(capitals)

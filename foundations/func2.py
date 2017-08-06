@@ -5,7 +5,7 @@
 # def file_func():
 #     time_format = "%y-%m-%d %X"
 #     time_current = time.strftime(time_format)
-#     with open("text.txt", "a+") as file:
+#     with open("source.txt", "a+") as file:
 #         file.write("time %s end file \n" % time_current)
 #
 #
