@@ -1,3 +1,7 @@
+#! \usr\bin\env python3
+
+# Replaces all ADJECTIVE, NOUN, ADVERB, VERB keywords with user input in text.
+
 import os
 import re
 
@@ -16,19 +20,16 @@ def replace_words():
         # 遍历数组进行正则匹配并替换
         for index in range(len(words)):
             if adjective_regex.match(words[index]):
-                replace_word = input('请输入：\n')
-                words[index] = adjective_regex.sub(replace_word, words[index])
+                replace_word = adjective_regex.sub(input('请输入：\n'), words[index])
             elif noun_regex.match(words[index]):
-                replace_word = input('请输入：\n')
-                words[index] = noun_regex.sub(replace_word, words[index])
+                replace_word = noun_regex.sub(input('请输入：\n'), words[index])
             elif adverb_regex.match(words[index]):
-                replace_word = input('请输入：\n')
-                words[index] = adverb_regex.sub(replace_word, words[index])
+                replace_word = adverb_regex.sub(input('请输入：\n'), words[index])
             elif verb_regex.match(words[index]):
-                replace_word = input('请输入：\n')
-                words[index] = verb_regex.sub(replace_word, words[index])
+                replace_word = verb_regex.sub(input('请输入：\n'), words[index])
             else:
-                pass
+                continue
+            words[index] = replace_word
         with open('madlibs_duplicate.txt', 'w', encoding='utf-8') as madlibs_duplicate_file:
             mad_str = ' '.join(words)
             madlibs_duplicate_file.write(mad_str)
