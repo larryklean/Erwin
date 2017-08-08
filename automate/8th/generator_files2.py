@@ -14,7 +14,6 @@ def format_capitals(path_name):
 def make_quizs(source):
     if not os.path.exists('tests'):
         os.mkdir('tests')
-    # 生成35份试卷
     for quiz_num in range(35):
         quiz_file = open('tests/capital_quiz_%s.txt' % (quiz_num + 1), 'w', encoding='utf-8')
         answer_file = open('tests/quiz_answer_%s.txt' % (quiz_num + 1), 'w', encoding='utf-8')
