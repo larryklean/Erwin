@@ -1,3 +1,6 @@
+#! python3
+# compress all files of specify folder into a zip file
+
 import os
 import zipfile
 

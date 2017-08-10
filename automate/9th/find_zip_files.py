@@ -1,3 +1,6 @@
+#! python3
+# find all .py files in specify path and then compress them into a zip file
+
 import os
 import zipfile
 

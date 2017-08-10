@@ -1,3 +1,6 @@
+#! python3
+# find size of file more than 50MB and delete them
+
 import os
 
 
