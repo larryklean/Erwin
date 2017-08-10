@@ -21,6 +21,15 @@ def back2zip(folder):
         print('Add files in %s...' % foldername)
         # add current folder to zip file
         backup_zip.write(foldername)
-    for filename in filenames:
-        pass
-        # TODO:
+        # add files in current folder to zip file
+        for filename in filenames:
+            new_base = os.path.basename(folder) + '_'
+            if filename.startswith(new_base) and filename.endswith('.zip'):
+                continue
+            print('Add %s ...' % filename)
+            backup_zip.write(os.path.join(foldername, filename))
+    backup_zip.close()
+    print('Done')
+
+
+back2zip('/Users/Cortana/PycharmProjects/Erwin/automate/8th')
