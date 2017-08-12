@@ -95,7 +95,7 @@ example_zip.close()
 # 解压缩文件
 # example_zip.extractAll(path)
 # 1.不传入参数，将zip中的所有文件解压缩到当前目录
-# 2.传入参数，将zip中的所有文件解压缩到指定目录
+# 2.传入路径参数，将zip中的所有文件解压缩到指定目录
 # exampleZip.extract(filename,path)
 # 1.将zip中的指定文件进行解压缩到指定目录，不写第二个参数则解压到当前目录
 # 2.返回被解压文件的绝对路径
